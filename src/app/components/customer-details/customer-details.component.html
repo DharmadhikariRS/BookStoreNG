@@ -1,0 +1,127 @@
+<div class="main-container-customer ">
+    <div class="first-div-customer">
+      <span class="customer-heading">Customer Details</span>{{" "}}
+      <div class="add-new-address">Add New Address</div>
+    </div>
+
+    <div class="name-mobile-customer">
+      <input
+        id="outlined-basic"
+        label="Full Name"
+        variant="outlined"
+        size="small"
+        name="FullName"
+        value="userDetails.Addresses[0].FullName"
+       placeholder="Fullname"
+        [(ngModel)]="userDetails.Addresses[0].FullName"
+        style=" width:30%"
+        class="fontSizeFields"
+      />
+      <input
+        id="outlined-basic"
+        label="Mobile Number"
+        variant="outlined"
+        size="small"
+        name="MobileNumber"
+        value="userDetails.Addresses[0].MobileNumber"
+        [(ngModel)]="userDetails.Addresses[0].MobileNumber"
+        placeholder="Mobilenumber"
+        style=" width: 30%"
+        class="fontSizeFields"
+      />
+    </div>
+    <div class="address-customer ">
+      <span class="address-label">Address</span>
+      <input
+        type="text"
+        placeholder="Enter your address here"
+        name="address"
+        value="userDetails.Addresses[0].address"
+        [(ngModel)]="userDetails.Addresses[0].address"
+        placeholder="Address"
+        class="textarea-address"
+      />
+    </div>
+    <div class="city-state-customer">
+      <input
+        id="outlined-basic"
+        label="city/town"
+        variant="outlined"
+        size="small"
+        name="city"
+        value="userDetails.Addresses[0].city"
+        placeholder="City"
+        [(ngModel)]="userDetails.Addresses[0].city"
+     
+        style="width: 30%"
+        class="fontSizeFields"
+      />
+      <input
+        id="outlined-basic"
+        label="State"
+        variant="outlined"
+        size="small"
+        name="state"
+        value="userDetails.Addresses[0].state"
+        placeholder="State"
+        [(ngModel)]="userDetails.Addresses[0].state"
+    
+        style=" width: 30%"
+        class="fontSizeFields"
+      />
+    </div>
+
+    <div class="address-type margin">
+      <span>Type</span>
+      <div class="address-type-radio-btns">
+        <input
+          type="radio"
+          id="html"
+          name="type"
+          value="Home"
+          ng-checked="userDetails.Addresses[0].type === Home "
+          [(ngModel)]="userDetails.Addresses[0].type"
+        />
+         <label htmlFor="home">Home</label>
+        <input
+          type="radio"
+          id="css"
+          name="type"
+          value="Work"
+          ng-checked="userDetails.Addresses[0].type === Work "
+          [(ngModel)]="userDetails.Addresses[0].type"
+        />
+          <label htmlFor="work">Work</label>
+        <input
+          type="radio"
+          name="type"
+          value="Other"
+          ng-checked="userDetails.Addresses[0].type === Other "
+          [(ngModel)]="userDetails.Addresses[0].type"
+        />
+         <label htmlFor="other">Other</label>
+      </div>
+    </div>
+   
+      <div
+        style="
+          color:red;
+          textAlign: left;
+          paddingLeft: 5%;
+          fontSize: 0.78rem"
+          *ngIf="showError"
+      >
+        Please enter all the detaitls to proceed
+      </div>
+    
+   
+      <div class="continueButton" *ngIf="!orderSummary">
+        <button
+          type="button"
+          class="continue"
+          (click)="addCustomerDetail()"
+        >
+          Continue
+        </button>
+      </div>
+     </div>

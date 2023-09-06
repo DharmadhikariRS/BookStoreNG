@@ -1,0 +1,150 @@
+<div class="Book-main-container">
+    <div class="Box-Image ">
+        <img class="Box-Image1" src="../../../assets/smallBook.png" alt="Book" />
+        <img src="../../../assets/smallBook2.png" alt="Book" />
+      </div>
+      <div class="Big-Image-container ">
+        <div class="card-container">
+          <div class="img-content">
+            <img src="../../../assets/BookImage.jpeg" alt="Book" class="img-size" />
+          </div>
+        </div>
+        <div class="button-class">
+           
+              <button *ngIf="!buttonToggle"
+                variant="contained"
+                class="buttons"
+               (click)="addToCart()"
+              >
+                Add To Cart
+              </button>
+           
+         
+              <div class="btnsAndcount-bookview" *ngIf="buttonToggle">
+                <button
+                  class="quantity-button-bookview"
+                 (click)="removeFromCart()"
+                >
+                  -
+                </button>
+                <!-- {/* <span class="book-count-bookview">{book.quantity}</span> */} -->
+                <span class="book-count-bookview">{{bookCount}}</span>
+                <button
+                  class="quantity-button-bookview"
+                  (click)="addToCart1()"
+                >
+                  +
+                </button>
+              </div>
+          
+            <Button
+              variant="contained"
+              class="buttons button2"
+             (click)="addToWishlist()"
+            >
+              <!-- <FavoriteIcon
+                class="favButton"
+           
+                style="color:wishlistToggle"
+              /> -->
+             <mat-icon   class="favButton"
+              
+              [ngStyle]="{'color': wishlistToggle ,'marginTop':'0.6rem', 'marginRight':'0'}">favorite</mat-icon>
+              {{wishlistToggle === "" ? "wishlist" : "wishlisted"}}
+            </Button>
+          </div>
+     </div>
+
+        <div class="book-details-main">
+            <div class="book-name-class-display bookName">
+              {{book.bookName}}
+            
+            </div>
+            <div class="book-name-class-display book-author-class-display">
+              By {{book.author}}
+              
+            </div>
+            <div class="book-name-class-display book-ratingBox-display">
+                <div class="greenBox-display">
+                  4.5 
+                  <!-- <StarIcon fontSize="0.8rem" /> -->
+                  <mat-icon fontSet="material-icons-outlined" style="fontSize:1rem; marginTop:0.5rem ;marginLeft:0.5rem">star</mat-icon>
+                </div>
+                <span class="ratingCount-display">(20)</span>
+              </div>
+              <div class="book-name-class-display priceBox-display">
+                <span>Rs. {{book.discountPrice}} </span>
+                <span class="priceBox1-display">Rs. {{book.price}}</span>
+               
+              </div>
+              <hr class="hr-class" />
+              <div class="book-name-class-display book-bullet-class-display">
+                <!-- <RadioButtonUncheckedIcon class="bullet" /> -->
+                Book details
+              </div>
+              <p class="book-name-class-display text-class">
+                {{book.description}}
+              </p>
+              <hr class="hr-class" />
+              <div class="book-name-class-display feedback">
+                Customer Feedback
+              </div>
+              <div class="book-name-class-display feedback-class">
+                <span class="overall-ratring">Overall rating</span>
+                <div>
+                    <mat-icon fontSet="material-icons-outlined" class="rateicon-white">star</mat-icon>
+                    <mat-icon fontSet="material-icons-outlined" class="rateicon-white">star</mat-icon>
+                    <mat-icon fontSet="material-icons-outlined" class="rateicon-white">star</mat-icon>
+                    <mat-icon fontSet="material-icons-outlined" class="rateicon-white">star</mat-icon>
+                    <mat-icon fontSet="material-icons-outlined" class="rateicon-white" >star</mat-icon>
+               
+                </div>
+                <Textarea
+                  placeholder="write your review here"
+                  rows="4"
+                  cols="50"
+                  style=" width: 100%; padding: 0; border: 0">
+            </Textarea>
+                <div class="submitButton"
+                
+                >
+                  <button
+                   class="buttons"
+                    style="width: 10%; backgroundColor: #3371B5 !important ;color:white ;border:none ;fontSize:medium !important ;"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
+              
+          <div
+          class="book-name-class-display"
+          display="flex"
+          alignItems="center"
+        >
+          <img
+            src="../../../assets/profile.png"
+            alt="profilePic"
+            style=" borderRadius: 50%; height: 80%"
+          />
+          <span style="fontSize: 60%; marginLeft: 1% ">
+            Rio Disuza
+          </span>
+        </div>
+        <div class="book-name-class-display">
+          <!-- <StarOutlinedIcon sx={{ color: "gold" }} /> -->
+          <mat-icon fontSet="material-icons-outlined" class="rateicon">star</mat-icon>
+          <mat-icon fontSet="material-icons-outlined" class="rateicon">star</mat-icon>
+          <mat-icon fontSet="material-icons-outlined" class="rateicon">star</mat-icon>
+          <mat-icon fontSet="material-icons-outlined" class="rateicon">star</mat-icon>
+          <mat-icon fontSet="material-icons-outlined" class="rateicon-white" >star</mat-icon>
+         
+        </div>
+        <div class="book-name-class-display text-class">
+          <span>
+            Excellent customer service. (EN) was very friendly, patient and
+            helpful in helping us find what we were looking for.
+          </span>
+        </div>
+        </div>
+</div>

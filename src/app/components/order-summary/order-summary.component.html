@@ -1,0 +1,36 @@
+
+<div class="main-container-cart">
+    <div class="first-div">
+      <div class="allCartBooks" style=" paddingTop: 2% ">
+       
+       
+            <div class="book-details-cart" *ngFor="let book of data.books" style="marginBottom:1rem">
+              <div class="change-display-left">
+                <img src="../../../assets/mini-book-cart.png" alt="cart book" />
+              </div>
+              <div class="book-details">
+               
+                <div class="bookNameClass">{{book.bookName}}</div>
+                <div class="incart-author"> by {{book.author}}</div>
+                <div class="incart-price">
+                  <span class="incart-price">Rs.{{book.discountPrice}}</span>
+                  <span class="priceBox1-display-cart incart-discount">
+                    Rs. {{book.price}}
+                  </span>
+                </div>
+              </div>
+            </div>
+        
+      </div>
+   
+        <div class="placeorder-cart">
+          <div
+            class="order-btn-cart"
+           (click)="purchaseCart()"
+          >
+            Checkout
+          </div>
+        </div>
+   
+    </div>
+  </div>

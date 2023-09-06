@@ -1,0 +1,71 @@
+.main-container-order {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 0.5%;
+    padding-bottom: 5%;
+  }
+
+  .image-order {
+    height: 8%;
+    width: 25%;
+  }
+
+  .order-confirmation-details {
+    width: 30%;
+    text-align: center;
+    color: "#333232";
+  }
+.seller-info-table{
+    border: 1px solid #DCDCDC;
+    width: 50%;
+    background-color: lightsteelblue;
+    color: "#333232";
+  
+  }
+
+  .seller-info-table  th {
+    width: 20%;
+ background:#FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #DCDCDC;
+  }
+
+  .seller-info-table  td{
+    border: 1px solid #DCDCDC;
+  }
+
+  .seller-address {
+    text-align: left;
+    width: 30%;
+    padding: 2%;
+  };
+  .seller-contact {
+    text-align: center;
+  }
+
+  .btn-continue-shopping {
+    color:#FFFFFF;
+    text-transform: uppercase;
+    background: #3371B5 0% 0% no-repeat padding-box;
+    border-radius: "3px";
+    width: "15%";
+  }
+  .seller-info-table-first-breakpoint {
+    border: 1px solid #DCDCDC;
+    width: "50%";
+    background-color: lightsteelblue;
+    color: "#333232";
+    text-align: center;
+    display: "none";
+  }
+
+  .seller-info-table-first-breakpoint th {
+    width: 20%;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #DCDCDC;
+  };
+  .seller-info-table-first-breakpoint td {
+    border: 1px solid #DCDCDC;
+    text-align: center;
+  }

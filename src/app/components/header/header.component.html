@@ -1,0 +1,32 @@
+<div class="headerdiv">
+    <div class="div-all-content">
+<img src="../../../assets/logo.png" class="book-logo"/>
+<span  style="color:white ;marginLeft: 1%; ">Bookstore</span> 
+<div class="searchdiv">
+    <!-- <img class="iconclass marginsearch" src="../../../assets/searchSymbol.jpg" alt="AccLogo" /> -->
+    <mat-icon  >
+   
+        search
+       </mat-icon>
+    <!-- <input class="searchInput marginsearch" type="text" placeholder="Search" [(ngModel)]="searchedTitle" (ngModelChange)="searchedTitle=setSearch()"/> -->
+    <input class="searchInput marginsearch" type="text" placeholder="Search" [(ngModel)]="searchedTitle" (keyup)="setSearch($event)"/>
+
+</div>
+<div class="rightlogos">
+<div class="logo-flex" (click)="profiletoggle()">
+    <mat-icon  class="icon-color" fontSet="material-icons-outlined" >person</mat-icon>
+   <span  style="color:white;fontSize: 0.7rem;">Profile</span> 
+</div>
+<div class="logo-flex" (click)="goToCart()">
+    <mat-icon [matBadge]="badge" matBadgeSize="small"class="icon-color" fontSet="material-icons-outlined">shopping_cart</mat-icon>
+    <span style="color:white;fontSize: 0.7rem;">Cart</span>
+</div>
+</div>
+</div>
+</div>
+
+<mat-card class="profileCard" *ngIf="profileToggle" >
+    <mat-card-content (click)="logOut()">Logout</mat-card-content>
+    <mat-card-content (click)="goToWishlist()">Wishlist</mat-card-content>
+    <mat-card-content  (click)="profiletoggle()">Cancel</mat-card-content>
+  </mat-card>

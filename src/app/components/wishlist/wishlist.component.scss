@@ -1,0 +1,244 @@
+.wishClass {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+  .footer-outsitei-div {
+    flex: 1;
+  }
+  .main-container-Wishlist {
+    display: flex;
+    /* width: 65vw; */
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 2%;
+    flex-direction: column;
+    gap: 15px;
+    border: 1px solid #e4e4e4;
+  }
+  .cart-header {
+    margin-top: 3%;
+    margin-left: 10%;
+    display: flex;
+    align-items: flex-start;
+  }
+  .home-route {
+    color: #9d9d9d;
+  }
+  .All-Wishlist-books {
+    // display: flex;
+    // /* flex-direction: column; */
+    // border: 1px solid grey;
+    // padding-left: 1%;
+  }
+  
+  .Wishlist-single-div {
+      /* width: 99%; */
+      display: flex;
+      /* border: 1px solid grey; */
+      /* margin-top: 1%; */
+      padding-left: 1%;
+  }
+  
+  .Wishlist-book-count {
+    display: flex;
+    align-items: flex-start;
+    background-color: #e4e4e4;
+    height: 3rem;
+  }
+  .Wishlist-count-label {
+    margin-left: 6%;
+    padding: 1% 0px;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  
+  .book-details-Wishlist {
+    display: flex;
+    gap: 5%;
+    padding-bottom: 2%;
+    margin-top: 2%;
+    width: 100%;
+  }
+  .delete-icon-Wishlist {
+    margin-right: 3%;
+    /* margin-top: 1rem; */
+    margin: auto;
+    margin-right: 1%;
+  }
+  
+  .Wishlist-book-details {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    /* margin-left: 4%; */
+  }
+  .bookNameClass1 {
+    display: flex;
+    justify-content: flex-start;
+    white-space: normal;
+    width: 100%;
+  }
+  
+
+
+
+  ////////////////
+  .main-container-cart {
+    display: flex;
+    width: 65vw;
+    margin-left: 6%;
+    margin-top: 2%;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .continerCart {
+    height: 100%;
+  }
+  .first-div {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    border: 1px solid #dcdcdc;
+    padding-bottom: 3%;
+  }
+  .mycart-location {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 1%;
+    padding-bottom: 3%;
+  }
+  
+  .cart-count {
+    display: flex;
+    align-items: center;
+    margin-left: 6%;
+  }
+  
+  .select-location {
+    display: flex;
+    align-items: center;
+    border: 1px solid #dcdcdc;
+    margin-right: 3%;
+  }
+  
+  .sort-by-cartlocation {
+    border: 0 !important;
+  }
+  
+  .book-details-cart {
+    display: flex;
+    gap: 5%;
+    padding-bottom: 3%;
+  }
+  .book-details {
+    display: flex;
+    flex-direction: column;
+  }
+  .bookNameClass {
+    display: flex;
+    justify-content: flex-start;
+    white-space: normal;
+  }
+  .incart-author {
+    text-align: left;
+    color: #9d9d9d;
+    font-size: 0.8rem;
+    padding-top: 2%;
+  }
+  
+  .incart-price {
+    text-align: left;
+    font-size: 1rem;
+    padding-top: 2%;
+  }
+  
+  .incart-discount {
+    font-size: 0.8rem;
+  }
+  
+  .quantity-buttons {
+    display: flex;
+    margin-left: 17.5%;
+    gap: 5%;
+    padding-bottom: 3%;
+  }
+  
+  .quantity-button-cart {
+    border-radius: 50%;
+    border: 1px solid #dbdbdb;
+    margin: 0% 6%;
+  }
+  
+  .remove-btn {
+    text-align: left;
+    color: #0a0102;
+    border: 1px solid white;
+    font-size: 15px;
+    background-color: white;
+  }
+  
+  .book-count-cart {
+    display: inline-block;
+    border: 1px solid #dbdbdb;
+    border-radius: 1px;
+    width: 60%;
+    text-align: center;
+  }
+  .btnsAndcount-cart {
+    display: flex;
+    width: 16%;
+  }
+  
+  .placeorder-cart {
+    margin-left: 81%;
+    background: #3371b5 0% 0% no-repeat padding-box;
+    width: 16%;
+  }
+  .order-btn-cart {
+    border-radius: 2px;
+    background-color: transparent;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin: 4% 0;
+  }
+  
+  .second-div {
+    border: 1px solid #dcdcdc;
+    border-radius: 1px;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .address-cart {
+  }
+  
+  .third-div {
+    border: 1px solid #dcdcdc;
+    border-radius: 1px;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .ordersummary-cart {
+  }
+  
+
+  .home-route {
+    color: #9d9d9d;
+  }
+  .allCartBooks {
+    display: flex;
+    flex-direction: column;
+  }
+  .priceBox1-display {
+    color: #878787;
+    text-decoration: line-through;
+    font-size: 58%;
+  }
+  

@@ -1,0 +1,70 @@
+.headerdiv{
+    display: flex;
+    border:1px solid black;
+    height: 4rem;
+    width: 100%;
+    background-color: #A03037;
+    align-items: center; 
+   
+}
+.div-all-content{
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.book-logo{
+    height: 1.5rem;
+    // margin-left: 10%;
+}
+.iconclass{
+    height: 22px;
+    width: 18px;
+}
+.marginsearch{
+    margin-left: 2%;
+    height: 18px;
+}
+.searchdiv{
+    display: flex;
+    align-items: center;
+    /* width: 80%; */
+    width: 45%;
+    margin-left: 9%;
+    height: 2.2rem;
+    background-color: white;
+}
+.searchInput{
+    width: 99%;
+    margin: 0;
+    padding: 0;
+    height: 85%;
+    // background-color: #f1f3f4;
+    outline:none;
+    border: none;
+}
+.rightlogos{
+    display: flex;
+    align-items: center;
+    /* margin-left: 31%; */
+    width: 10%;
+    // border: 1px solid red;
+    margin-left: 27%;
+}
+.logo-flex{
+    display: flex;
+    flex-direction: column;
+    margin-left: 16%;
+    align-items: center;
+}
+.profileCard{
+    position: absolute;
+    right: 10rem;
+    top: 43px;
+}
+@media only screen and (min-width: 320px) and (max-width: 720px)   {
+    .rightlogos{
+        margin-left: 10%;
+       }
+}

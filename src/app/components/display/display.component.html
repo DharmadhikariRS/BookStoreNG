@@ -1,0 +1,45 @@
+<div class="main-container">
+  <div class="change-display change-display-left">
+    <span class="Books">Books </span>
+    <span class="book-count">({{books.length}})</span>
+  </div>
+  <div
+    class="change-display change-display-right"
+  >
+  <!-- <label for="sort">Sort by releavance</label> -->
+    <select name="sort"class="sort-by" (change)="sortBooks($event)">
+      <option value="sort" selected disabled hidden >sort by releavance</option>
+      <option value="none">None</option>
+      <option value="Low to High">Price: Low to High</option>
+      <option value="High to Low">Price: High to Low</option>
+    </select>
+  </div>
+</div>
+<div class="bookpage">
+<div class="mainContainer-card"  *ngFor="let book of books | filter:filterValue | sort:sortBy |paginate: { itemsPerPage: 4, currentPage: p }" (click)="goTobookDetail(book)">
+      <div class="contentClass">
+        <div class="BookBox">
+          <img src="../../../assets/BookImage.png" alt="Book not found" class="book-image" />
+        </div>
+        <div class="book-name-class">{{book.bookName}}</div>
+        <div class="book-name-class book-author-class">
+          By {{book.author}}
+        </div>
+        <div class="book-name-class book ratingBox">
+          <div class="greenBox">
+            4.5 <mat-icon class="staricon">star</mat-icon>
+            <!-- <StarIcon fontSize="1rem" /> -->
+          </div>
+          <span class="ratingCount">(20)</span>
+        </div>
+        <div class="book-name-class priceBox">
+          <span>Rs. {{book.discountPrice}} </span>
+          <span class="priceBox1">Rs. {{book.price}}</span>
+        </div>
+    </div>
+    </div>
+   
+  </div>
+  <div class="pagination">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

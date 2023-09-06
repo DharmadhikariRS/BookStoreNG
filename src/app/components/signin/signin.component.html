@@ -1,0 +1,118 @@
+<div class="main-container-signin"></div>
+<div class="app-logo ">
+  <img src="../../../assets/bookstore-logo.png" alt="bookstore logo" class="Signin-img" />
+  <span class="content">Online Book Shopping</span>
+</div>
+<div class="login-box" *ngIf="!toggle">
+    <button class="login-btn" (click)="logIn()">
+      Login
+    </button>
+    <button
+      class="login-btn signup-btn"
+      
+      (click)="signUp()"
+    >
+      Signup
+    </button>
+    <form  [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="outline"  class="email-input fullname">
+            <mat-label>Fullname</mat-label>
+            <input matInput placeholder="Placeholder"  name="fullNmae" formControlName="fullName">
+            <mat-error *ngIf="submitted && f['fullName'].errors?.['required']"> Firstname is required
+            
+            </mat-error>
+            <mat-error *ngIf="submitted && f['fullName'].errors?.['pattern']"> First letter needs capital
+           </mat-error>
+        
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="email-input mail-input">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Placeholder"  name="firstName" formControlName="email">
+            <mat-error *ngIf="submitted && f['email'].errors?.['required']"> Firstname is required
+            
+            </mat-error>
+            <mat-error *ngIf="submitted && f['email'].errors?.['pattern']"> First letter needs capital
+           </mat-error>
+        
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="email-input passW-input">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Placeholder"  name="firstName" formControlName="password">
+            <mat-error *ngIf="submitted && f['password'].errors?.['required']"> Firstname is required
+            
+            </mat-error>
+            <mat-error *ngIf="submitted && f['password'].errors?.['pattern']"> First letter needs capital
+           </mat-error>
+        
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="email-input Mobilenum-input">
+            <mat-label>Mobilenumber</mat-label>
+            <input matInput placeholder="Placeholder"  name="firstName" formControlName="mobileNumber">
+            <mat-error *ngIf="submitted && f['mobileNumber'].errors?.['required']"> Firstname is required
+            
+            </mat-error>
+            <mat-error *ngIf="submitted && f['mobileNumber'].errors?.['pattern']"> First letter needs capital
+           </mat-error>
+        
+          </mat-form-field>
+          <button class="main-Signup-btn">   
+            Signup
+          </button>
+    </form>
+</div>
+<div class="login-box" *ngIf="toggle">
+  <button class="login-btn" (click)="logIn()">
+    Login
+  </button>
+  <button
+    class="login-btn signup-btn"
+   
+    (click)="signUp()"
+  
+  >
+    Signup
+  </button>
+  <form  [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
+   
+        <mat-form-field appearance="outline" class="email-input loginemail">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Placeholder"  name="email" formControlName="email" >
+            <mat-error *ngIf="submittedlogin && fn['email'].errors"> email is required
+            </mat-error>
+          </mat-form-field>
+        
+          <mat-form-field appearance="outline" class="email-input password-input loginpass" >
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Placeholder"  name="password" formControlName="password">
+            <mat-error *ngIf="submittedlogin && fn['password'].errors"> need strong password,with caps,char,numbers
+           </mat-error>
+          </mat-form-field>
+
+          <!-- <a href="#" class="forgot-password">
+            Forgot Password
+          </a> -->
+          <button class="main-login-btn" type="submit">
+            Login
+          </button>
+          <div class=login-divider>
+            <hr class="dash-1" /> <p class="word-or">OR</p>
+            <hr class="dash-1 dash-2" />
+          </div>
+          </form>
+          <button class="faceBook-button">Facebook</button>
+          <button class="faceBook-button google-button" >
+            <asl-google-signin-button shape="rectangular" width="300px" logo_alignment="center"></asl-google-signin-button>
+           
+          </button>
+        
+        </div>
+        <!-- <mat-form-field>
+          <mat-label>Message</mat-label>
+          <input matInput value="Disco party!" #message>
+        </mat-form-field>
+        
+        <mat-form-field>
+          <mat-label>Action</mat-label>
+          <input matInput value="Dance" #action>
+        </mat-form-field> -->

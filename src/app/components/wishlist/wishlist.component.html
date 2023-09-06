@@ -1,0 +1,49 @@
+<div class="cart-header">
+  <span class="home-route" (click)="goToHome()"> Home/{{ " " }} </span>
+  <span>My Wishlist</span>
+</div>
+<div class="main-container-Wishlist">
+  
+    <div class="Wishlist-book-count">
+      {{" "}}
+      <span className="Wishlist-count-label">My Wishlist  ({{books.length}})</span>
+    </div>
+<div class="All-Wishlist-books"  >
+  
+      <div class="Wishlist-single-div" *ngFor="let book of books">
+        <div class="book-details-Wishlist">
+          <div class="change-display-left">
+            <img src="../../../assets/mini-book-cart.png" alt="cart book" />
+          </div>
+          <div class="Wishlist-book-details">
+            <div class="book-name-cart bookNameClass1">
+             {{book.bookName}}
+              
+            </div>
+            <div class="incart-author"> 
+                by {{book.author}}
+                
+            </div>
+            <div class="incart-price">
+              <span class="incart-price">Rs.{{book.discountPrice}} </span>
+              <span class="priceBox1-display incart-discount">
+                Rs.{{book.price}}
+                
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="delete-icon-Wishlist"
+         
+        >
+          <!-- <DeleteForeverOutlinedIcon sx={{ color: "grey" }} /> -->
+          <mat-icon style="color:grey" (click)="removeFromWishlist(book._id)">delete_forever</mat-icon>
+        </div>
+      </div>
+  
+  </div>
+  </div>
+<!-- <div *ngIf="!books" style="textAlign:center ;color:red;marginTop:20%">
+ <h1>Cart is empty !!</h1>
+</div> -->

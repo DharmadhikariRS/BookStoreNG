@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.icon-color{
+    color:white !important;
+}   
+.rateicon{
+    color: #FFCE00;
+}
+.mat-mdc-card-content {
+    display: block;
+    padding: 7% 16px !important;
+}

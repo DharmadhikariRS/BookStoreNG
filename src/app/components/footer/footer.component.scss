@@ -1,0 +1,21 @@
+.footerClass {
+    border: 1px solid black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: start;
+    padding-left: 20%;
+    line-height: 2.5rem;
+    background-color: #2e1d1e;
+    color: aliceblue;
+  }
+  @media only screen and (min-width: 320px) and (max-width: 460px)   {
+    .footerClass{
+        padding-left: 5%;
+    }
+  }
+  @media only screen and (min-width: 460px) and (max-width: 720px)   {
+    .footerClass{
+        padding-left: 20%;
+    }
+  }
